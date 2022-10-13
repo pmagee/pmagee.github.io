@@ -1,0 +1,823 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{mso-style-link:"Plain Text Char";
+	margin:0cm;
+	font-size:10.5pt;
+	font-family:Consolas;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+span.PlainTextChar
+	{mso-style-name:"Plain Text Char";
+	mso-style-link:"Plain Text";
+	font-family:Consolas;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-IE style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><b><span lang=EN-GB style='font-size:12.0pt;line-height:
+107%;font-family:"Arial",sans-serif'>Lab 6 Part (3)</span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-GB style='font-size:12.0pt;line-height:
+107%;font-family:"Arial",sans-serif'>Bootstrap</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>In this exercise we are going to improve the layout of our
+website. Instead of writing all the HTML and CSS code, we will use Bootstrap,
+the most popular framework for building responsive, mobile-first projects.
+Rather than write all our own code for common website layout features, we can
+instead rely on Bootstrap to do this for us. This means with only a small
+amount of code on our part we can quickly have great looking websites. And if
+we want to make custom changes as a project progresses, it’s easy to override
+Bootstrap where needed, too. When you want to focus on the functionality of a
+project and not the design, Bootstrap is a great choice. </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>There are two ways to add Bootstrap to a project: you can
+download all the files and</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>serve them locally or rely on a Content Delivery Network
+(CDN). The second approach</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>is simpler to implement provided you have a consistent
+internet connection so that is</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>what we will use here.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>Bootstrap comes with a starter template that includes the
+basic files needed. Notably</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>there are four that we incorporate:</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:54.0pt;text-align:justify;text-indent:-18.0pt;
+line-height:150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;
+font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-GB style='font-size:12.0pt;line-height:150%;
+font-family:"Arial",sans-serif'>Bootstrap.css</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:54.0pt;text-align:justify;text-indent:-18.0pt;
+line-height:150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;
+font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-GB style='font-size:12.0pt;line-height:150%;
+font-family:"Arial",sans-serif'>jQuery.js</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:54.0pt;text-align:justify;text-indent:-18.0pt;
+line-height:150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;
+font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-GB style='font-size:12.0pt;line-height:150%;
+font-family:"Arial",sans-serif'>Popper.js</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:54.0pt;text-align:justify;text-indent:-18.0pt;
+line-height:150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;
+font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-GB style='font-size:12.0pt;line-height:150%;
+font-family:"Arial",sans-serif'>Bootstrap.js</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>Overwrite the <b>base.html</b> file with the code provided
+here.</span></p>
+
+<span lang=EN-GB style='font-size:12.0pt;line-height:107%;font-family:"Arial",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:107%;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span style='position:absolute;z-index:251667456;left:0px;margin-left:
+3px;margin-top:18px;width:592px;height:646px'><img width=592 height=646
+src="Lab%206%20Part%203%20Bootstrap_files/image001.png"
+alt="&lt;!doctype html&gt;&#13;&#10;&lt;html lang=&quot;en&quot;&gt;&#13;&#10;  &lt;head&gt;&#13;&#10;    &lt;!-- Required meta tags --&gt;&#13;&#10;    &lt;meta charset=&quot;utf-8&quot;&gt;&#13;&#10;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&#13;&#10;&#13;&#10;&lt;!-- CSS only --&gt;&#13;&#10;&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi&quot; crossorigin=&quot;anonymous&quot;&gt;&#13;&#10;&#13;&#10;  &lt;/head&gt;&#13;&#10;  &lt;body&gt;&#13;&#10;      &lt;h1&gt;Hello, world!&lt;/h1&gt;&#13;&#10;&lt;!-- JavaScript Bundle with Popper --&gt;&#13;&#10;&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;&#13;&#10;  &lt;/body&gt;&#13;&#10;&lt;/html&gt;&#13;&#10;"></span><b><span
+lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>base.html</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>If you start the server again with <b>python manage.py
+runserver</b> and refresh the homepage at http://127.0.0.1:8000/ you will see
+that only the font size has changed at</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>the moment.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB><img width=329 height=92 id="Picture 14"
+src="Lab%206%20Part%203%20Bootstrap_files/image002.jpg"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>Next, we will add a navigation bar at the top of the page
+which contains our links for the homepage, log in, log out, and sign up.
+Notably we can use the if/else tags in the</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>Django templating engine to add some basic logic. We want
+to show a “log in” and “sign up” button to users who are logged out, but a “log
+out” and “change password” button to users logged in.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>Delete the &lt;h1&gt; tag with “Hello World” i.e., line 13 and
+copy paste the code given on the next page into the <b>base.html</b> file at
+this location. </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span style='position:absolute;z-index:251669504;left:0px;margin-left:
+9px;margin-top:247px;width:278px;height:25px'><img width=278 height=25
+src="Lab%206%20Part%203%20Bootstrap_files/image003.png"></span><span
+lang=EN-GB><img width=594 height=350 id="Picture 1"
+src="Lab%206%20Part%203%20Bootstrap_files/image004.png"
+alt="Text&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<span lang=EN-GB style='font-size:12.0pt;line-height:107%;font-family:"Arial",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=EN-GB style='font-size:12.0pt;line-height:107%;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoPlainText><b><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>base.html</span></b></p>
+
+<p class=MsoPlainText><span style='font-family:"Courier New"'> </span></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>   &lt;nav class=&quot;navbar navbar-expand-lg navbar-dark
+bg-dark&quot;&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>      &lt;div class=&quot;container-fluid&quot;&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>        &lt;a class=&quot;navbar-brand&quot;
+href=&quot;#&quot;&gt;Newspaper&lt;/a&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>        &lt;button class=&quot;navbar-toggler&quot;
+type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarSupportedContent&quot;
+aria-controls=&quot;navbarSupportedContent&quot;
+aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>          &lt;span
+class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>        &lt;/button&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>        &lt;div class=&quot;collapse navbar-collapse&quot;
+id=&quot;navbarSupportedContent&quot;&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>          {% if user.is_authenticated %}</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>          &lt;ul class=&quot;nav navbar-nav ms-auto&quot;&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>            &lt;li class=&quot;nav-item dropdown&quot;&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>                &lt;a href=&quot;#&quot; class=&quot;nav-link
+dropdown-toggle&quot; data-bs-toggle=&quot;dropdown&quot;&gt;{{user.username}}&lt;/a&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>                &lt;div class=&quot;dropdown-menu
+dropdown-menu-end&quot;&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>                    &lt;a href=&quot;{% url
+'password_change'%}&quot; class=&quot;dropdown-item&quot;&gt;Change
+Password&lt;/a&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>                    &lt;a href=&quot;{% url 'logout' %}&quot;
+class=&quot;dropdown-item&quot;&gt;Logout&lt;/a&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>                &lt;/div&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>            &lt;/li&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>        &lt;/ul&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>&lt;/div&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>        {% else %}</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>          &lt;a href=&quot;{% url 'login' %}&quot;
+class=&quot;btn btn-outline-secondary&quot;&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>          Log In&lt;/a&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>          &lt;a href=&quot;{% url 'signup' %}&quot; class=&quot;btn
+btn-primary ml-2&quot;&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>          Sign up&lt;/a&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>      {% endif %}</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>      &lt;/div&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>    &lt;/nav&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>      </span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>    &lt;div class=&quot;container&quot;&gt;</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>          {% block content %}</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>          {% endblock content %}</span></p>
+
+<p class=MsoPlainText style='border:none;padding:0cm'><span style='font-family:
+"Courier New"'>    &lt;/div&gt;</span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>If you refresh the homepage at http://127.0.0.1:8000/ our
+new nav has appeared (make sure you are logged in):</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB><img width=604 height=90 id="Picture 5"
+src="Lab%206%20Part%203%20Bootstrap_files/image005.jpg"
+alt="Shape, rectangle&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>We have also added in our {% block content %} tags so the
+user greeting has returned, as has our “Newspaper App” in the title.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>Click on the username in the dropdown menu provided by Bootstrap
+and you will see two menu items, one for Change Password and the other for Log
+Out.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB><img width=603 height=113 id="Picture 6"
+src="Lab%206%20Part%203%20Bootstrap_files/image006.jpg"
+alt="Background pattern, rectangle&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>If you click on the “Log Out” link, then our nav bar
+changes offering links to either “Log</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>In” or “Sign Up.”</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB><img width=604 height=99 id="Picture 7"
+src="Lab%206%20Part%203%20Bootstrap_files/image007.jpg"
+alt="Shape, rectangle&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>If you shrink the size of your browser window Bootstrap
+automatically resizes and adjusts so it looks good on a mobile device, too.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB><img width=603 height=107 id="Picture 8"
+src="Lab%206%20Part%203%20Bootstrap_files/image008.jpg"
+alt="Background pattern, rectangle&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>If you click on the “Log Out” button and then “Log In” from
+the top nav you can also</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>see that our log in page http://127.0.0.1:8000/users/login
+looks better too.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB><img width=604 height=143 id="Picture 2"
+src="Lab%206%20Part%203%20Bootstrap_files/image009.jpg"
+alt="Shape, background pattern, rectangle&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>Change the “button” line in <b>templates/registration/login.html</b>
+as follows to make it green.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span style='position:absolute;z-index:251670528;left:0px;margin-left:
+10px;margin-top:195px;width:595px;height:26px'><img width=595 height=26
+src="Lab%206%20Part%203%20Bootstrap_files/image010.png"></span><span
+lang=EN-GB><img width=602 height=254 id="Picture 23"
+src="Lab%206%20Part%203%20Bootstrap_files/image011.jpg"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>Now refresh the page to see the updated button.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span style='position:absolute;z-index:251684864;left:0px;margin-left:
+37px;margin-top:116px;width:67px;height:37px'><img width=67 height=37
+src="Lab%206%20Part%203%20Bootstrap_files/image012.png"></span><span
+lang=EN-GB><img width=604 height=148 id="Picture 10"
+src="Lab%206%20Part%203%20Bootstrap_files/image013.jpg"
+alt="Background pattern&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><b><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>Sign Up Form</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>Our sign-up page at http://127.0.0.1:8000/accounts/signup/
+has Bootstrap stylings but</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>also distracting helper text. For example, after “Username”
+it says “Required. 150</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>characters or fewer. Letters, digits and @/./+/-/_ only.”</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB><img width=604 height=279 id="Picture 11"
+src="Lab%206%20Part%203%20Bootstrap_files/image014.jpg"
+alt="Graphical user interface, text, application&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>This helper text comes from Django. We will now look at a way
+to improve the layout of this helper text in our form. To do this will use a 3<sup>rd</sup>
+party application <b>django-crispy-forms</b> to help us to manage django forms.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>Stop the local server with <b>Control+c</b>. Then use pip
+to install the package in our project.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><b><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>Command Line</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>___________________________________________________________________</span></p>
+
+<p class=MsoNormal><b><span lang=EN-GB style='font-size:12.0pt;line-height:
+107%;font-family:"Arial",sans-serif'>pip install crispy-bootstrap5</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>___________________________________________________________________</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>Add the new app to our INSTALLED_APPS list in the <b>settings.py</b>
+file. As the number of apps starts to grow, it is helpful to distinguish
+between 3rd party apps and local apps we have added. Add in the comment on line
+40 below and the new code at lines 43-45. Here’s what the code looks like now.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><b><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><b><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>Code</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span style='position:absolute;z-index:251686912;left:0px;margin-left:
+5px;margin-top:131px;width:251px;height:23px'><img width=251 height=23
+src="Lab%206%20Part%203%20Bootstrap_files/image015.png"></span><span
+style='position:absolute;z-index:251674624;left:0px;margin-left:6px;margin-top:
+189px;width:251px;height:63px'><img width=251 height=63
+src="Lab%206%20Part%203%20Bootstrap_files/image016.png"></span><span
+lang=EN-GB> <img width=314 height=273 id="Picture 3"
+src="Lab%206%20Part%203%20Bootstrap_files/image017.png"
+alt="Text&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>Since we are using Bootstrap5 we must add that config to
+our <b>settings.py</b> file. This goes at the bottom of the file.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>Code</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span style='position:absolute;z-index:251672576;left:0px;margin-left:
+1px;margin-top:77px;width:424px;height:25px'><img width=424 height=25
+src="Lab%206%20Part%203%20Bootstrap_files/image018.png"></span><span
+lang=EN-GB><img width=436 height=106 id="Picture 49"
+src="Lab%206%20Part%203%20Bootstrap_files/image019.jpg"
+alt="A screenshot of a computer&#10;&#10;Description automatically generated with medium confidence"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>Now in our <b>signup.html</b> template we can quickly use
+crispy forms. First, we load</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>crispy_forms_tags at the top and then replace {{ form.as_p
+}} with {{ form|crispy</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>}}.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span style='position:absolute;z-index:251678720;left:0px;margin-left:
+1px;margin-top:199px;width:424px;height:25px'><img width=424 height=25
+src="Lab%206%20Part%203%20Bootstrap_files/image018.png"></span><span
+style='position:absolute;z-index:251676672;left:0px;margin-left:0px;margin-top:
+37px;width:424px;height:25px'><img width=424 height=25
+src="Lab%206%20Part%203%20Bootstrap_files/image018.png"></span><span
+lang=EN-GB><img width=492 height=281 id="Picture 31"
+src="Lab%206%20Part%203%20Bootstrap_files/image020.jpg"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>If you start up the server again with <b>python manage.py
+runserver</b> and refresh the signup page we can see the new changes.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB><img width=604 height=395 id="Picture 12"
+src="Lab%206%20Part%203%20Bootstrap_files/image021.jpg"
+alt="Graphical user interface, text, application, email&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>The form now looks much better. Next, we will change the
+colour of our “Sign Up” button to make it green? Bootstrap has all sorts of
+button styling options we can choose from. Let’s use the “success” one which
+has a green background and white text. Update the <b>signup.html</b> file on
+the line for the sign up button.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span style='position:absolute;z-index:251680768;left:0px;margin-left:
+2px;margin-top:205px;width:601px;height:26px'><img width=601 height=26
+src="Lab%206%20Part%203%20Bootstrap_files/image022.png"></span><span
+lang=EN-GB><img width=602 height=266 id="Picture 36"
+src="Lab%206%20Part%203%20Bootstrap_files/image023.jpg"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>Refresh the page and you can see our updated work.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span style='position:absolute;z-index:251682816;left:0px;margin-left:
+48px;margin-top:373px;width:62px;height:28px'><img width=62 height=28
+src="Lab%206%20Part%203%20Bootstrap_files/image024.png"></span><span
+lang=EN-GB><img width=604 height=402 id="Picture 15"
+src="Lab%206%20Part%203%20Bootstrap_files/image025.jpg"
+alt="Graphical user interface, text, application, email&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'>Run the following git commands to update the local and
+remote repositories:</span></p>
+
+<p class=MsoNormal><b><span lang=EN-GB style='font-size:12.0pt;line-height:
+107%;font-family:"Arial",sans-serif'>git add -A</span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-GB style='font-size:12.0pt;line-height:
+107%;font-family:"Arial",sans-serif'>git commit -m “lab 6 part 3”</span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-GB style='font-size:12.0pt;line-height:
+107%;font-family:"Arial",sans-serif'>git push -u origin main</span></b></p>
+
+</div>
+
+</body>
+
+</html>
